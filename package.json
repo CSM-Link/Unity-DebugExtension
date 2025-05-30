@@ -1,0 +1,20 @@
+{
+  "name": "com.csmtools.debugextension",
+  "version": "1.0.0",
+  "displayName": "Debug Extension",
+  "description": "non-invasive debug extension",
+  "unity": "6000.0",
+  "documentationUrl": "https://github.com/CSM-Link/Unity-DebugExtension",
+  "changelogUrl": "",
+  "licensesUrl": "https://github.com/CSM-Link/Unity-DebugExtension/blob/main/LICENSE",
+  "keywords": [
+    "Extension",
+    "Debug"
+  ],
+  "author": {
+    "name": "CSM",
+    "url": "https://github.com/CSM-link"
+  },
+  "type": "tool",
+  "hideInEditor": false
+}
