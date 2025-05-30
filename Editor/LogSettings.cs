@@ -20,19 +20,4 @@ namespace DebugExtensions
         [FolderPath]
         public string DirPath;
     }
-
-
-
-    [CreateAssetMenu(fileName = "LogSettings", menuName = "Scriptable Objects/LogSettings")]
-    internal class LogSettings : ScriptableObject
-    {
-        public Color DefaultColor = Color.white;
-
-        public LogSpecificColor[] SpecifiedColor;
-
-        public LogDirSetting[] ExcludeDir;
-
-        public LogDirSetting[] IncludeDir;
-
-    }
 }

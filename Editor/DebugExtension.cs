@@ -8,15 +8,12 @@ using DebugExtensions;
 
 public class Debug : UnityEngine.Debug
 {
-    private static LogSettings m_LogSettings;
+
+    private static DebugSettingsLocalCache LocalCache => DebugSettingsLocalCache.instance;
 
     [HideInCallstack]
     public static void Log(object message, string specifiedHexColor = null, [CallerFilePath] string callerFilePath = null)
     {
-        if (!m_LogSettings)
-        {
-            m_LogSettings = Resources.Load<LogSettings>("LogSettings");
-        }
 
         callerFilePath = callerFilePath.Replace("\\", "/");
 
@@ -45,7 +42,7 @@ public class Debug : UnityEngine.Debug
     [HideInCallstack]
     private static bool PathInExcludeDir(string callerFilePath)
     {
-        foreach (var item in m_LogSettings.ExcludeDir)
+        foreach (var item in LocalCache.ExcludeDir)
         {
             if (item.Enable)
             {
@@ -67,7 +64,7 @@ public class Debug : UnityEngine.Debug
     {
         var enabledCondition = 0;
 
-        foreach (var item in m_LogSettings.IncludeDir)
+        foreach (var item in LocalCache.IncludeDir)
         {
             if (item.Enable)
             {
@@ -95,7 +92,7 @@ public class Debug : UnityEngine.Debug
     [HideInCallstack]
     private static Color RetrieveColor(string callerFilePath)
     {
-        foreach (var item in m_LogSettings.SpecifiedColor)
+        foreach (var item in LocalCache.SpecifiedColor)
         {
             if (item.Enable)
             {
@@ -109,7 +106,7 @@ public class Debug : UnityEngine.Debug
             }
         }
 
-        return m_LogSettings.DefaultColor;
+        return LocalCache.DefaultColor;
     }
 
     [HideInCallstack]

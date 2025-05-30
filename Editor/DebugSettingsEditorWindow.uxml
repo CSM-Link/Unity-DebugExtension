@@ -1,0 +1,10 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <engine:ScrollView>
+        <engine:Label text="Color" style="align-items: stretch; align-content: flex-start; align-self: center; font-size: 18px; -unity-font-style: bold; margin-bottom: 6px;" />
+        <editor:ColorField label="Default Color" value="#B8FA77FF" hdr="false" show-eye-dropper="false" data-source-type="DebugExtensions.DebugSettingsLocalCache, DebugExtension" tabindex="0" enabled="true" name="ColorField01" />
+        <editor:PropertyField data-source-type="DebugExtensions.DebugSettingsLocalCache, DebugExtension" enabled="true" name="PropertyField01" style="margin-top: 10px;" />
+        <engine:Label text="Range" style="align-items: stretch; align-content: flex-start; align-self: center; font-size: 18px; padding-top: 4px; margin-top: 10px; -unity-font-style: bold; margin-bottom: 6px;" />
+        <editor:PropertyField name="PropertyField02" />
+        <editor:PropertyField name="PropertyField03" />
+    </engine:ScrollView>
+</engine:UXML>
