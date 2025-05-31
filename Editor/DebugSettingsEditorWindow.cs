@@ -9,6 +9,7 @@ namespace DebugExtensions
     internal class DebugSettingsEditorWindow : EditorWindow
     {
         private DebugSettingsLocalCache LocalCache => DebugSettingsLocalCache.instance;
+
         private SerializedObject _serializedSettings;
         private SerializedProperty _defaultColorProp;
         private SerializedProperty _specifiedColorProp;
@@ -26,11 +27,13 @@ namespace DebugExtensions
         private void OnEnable()
         {
             // 获取单例的 SerializedObject
+            // 此处在启动项目时会因为 ScriptableSingleton 转化为 SerializedObject 会报错,但是不影响使用
             _serializedSettings = new SerializedObject(LocalCache);
             _defaultColorProp = _serializedSettings.FindProperty("DefaultColor");
             _specifiedColorProp = _serializedSettings.FindProperty("SpecifiedColor");
             _excludeDirProp = _serializedSettings.FindProperty("ExcludeDir");
             _includeDirProp = _serializedSettings.FindProperty("IncludeDir");
+
         }
 
         private void CreateGUI()

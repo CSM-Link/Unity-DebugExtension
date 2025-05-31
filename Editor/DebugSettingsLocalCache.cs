@@ -34,7 +34,7 @@ namespace DebugExtensions
         private void OnValidate()
         {
             // Unity 自动调用，当值在Inspector中改变时
-            Save(true);
+            ForceSave();
         }
 #endif
     }
