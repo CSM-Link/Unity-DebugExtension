@@ -5,7 +5,11 @@
 
 存在如下两种用法：
 
-1、打开 Window/Debug Settings 配置项目中如下内容：
+
+
+### 用法一
+
+打开 Window/Debug Settings 配置项目中如下内容：
 
 颜色配置：
 
@@ -21,7 +25,11 @@
 
 
 
-2、调用 Debug.Log 时支持多传入一个字符串参数，表示16进制的RGB颜色，该参数将覆盖 LogSettings.asset 中的文本颜色设置。
+
+
+### 用法二
+
+调用 Debug.Log 时支持多传入一个字符串参数，表示16进制的RGB颜色，该参数将覆盖 Debug Settings 中的文本颜色设置。
 
 示例：
 
